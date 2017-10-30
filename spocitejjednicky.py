@@ -1,8 +1,14 @@
-cislo = (input("zadej cislo: "))
-hledanecislo = "1"
-kolikrat = 0
+def pocet_jednicek(cislo):
+    pocet = 0
+    while cislo > 0:
+        zbytek = cislo % 10
+        if zbytek == 1:
+            pocet = pocet + 1
+        cislo = cislo // 10
 
-for i in range(len(cislo)):
-    if cislo[i] == hledanecislo:
-        kolikrat = (kolikrat + 1)
-print(kolikrat)
+    return pocet
+
+cislo = int(input('Zadej cislo: '))
+pocet = pocet_jednicek(cislo)
+print('Pocet jednicek v cisle {} je {}.'.format(cislo, pocet))
+
