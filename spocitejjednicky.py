@@ -1,4 +1,6 @@
 def pocet_jednicek(cislo):
+    if cislo < 0:
+        cislo = -cislo
     pocet = 0
     while cislo > 0:
         zbytek = cislo % 10
@@ -11,4 +13,3 @@ def pocet_jednicek(cislo):
 cislo = int(input('Zadej cislo: '))
 pocet = pocet_jednicek(cislo)
 print('Pocet jednicek v cisle {} je {}.'.format(cislo, pocet))
-
